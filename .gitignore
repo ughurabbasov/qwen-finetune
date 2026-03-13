@@ -6,15 +6,15 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 
-workdir/
-output_0_6b/
-models/
+/workdir/
+/output_0_6b/
+/models/
 training.log
 *.wav
 
-Qwen3-TTS/
+/Qwen3-TTS/
 scripts/generate_gemini_dataset.py
-gemini-dataset/
+/gemini-dataset/
 
 .DS_Store
 Thumbs.db
