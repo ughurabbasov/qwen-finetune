@@ -13,6 +13,8 @@ training.log
 *.wav
 
 Qwen3-TTS/
+scripts/generate_gemini_dataset.py
+gemini-dataset/
 
 .DS_Store
 Thumbs.db

@@ -22,20 +22,29 @@ The main entry point is `scripts/run_finetune_0_6b.sh`, which runs:
 
 ### 1) Clone upstream finetuning code
 
-The script expects the official Qwen3-TTS repo at `Qwen3-TTS/`:
+The scripts expect the official Qwen3-TTS repo at `Qwen3-TTS/`:
 
 ```bash
 git clone https://github.com/QwenLM/Qwen3-TTS.git Qwen3-TTS
 ```
 
-### 2) Create and activate the venv
+### 2) Apply local fixes
+
+This repo includes patched files under `patches/Qwen3-TTS/`. Sync them into the
+cloned repo:
+
+```bash
+rsync -a patches/Qwen3-TTS/ Qwen3-TTS/
+```
+
+### 3) Create and activate the venv
 
 ```bash
 bash scripts/setup_env.sh
 source .venv/bin/activate
 ```
 
-### 3) Run full finetuning
+### 4) Run full finetuning
 
 ```bash
 DEVICE=cuda:0 bash scripts/run_finetune_0_6b.sh
